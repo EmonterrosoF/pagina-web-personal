@@ -1,8 +1,28 @@
+/* root */
+:root {
+  --background-dark: #2d3548;
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+/* ------------------------------------- */
+
+/* body */
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #000000;
 }
 
+/* -------------------------------------- */
+
+/* container */
 .container {
   /* background-color: red; */
   max-width: 1600px;
@@ -12,6 +32,9 @@ body {
   justify-content: space-between;
 }
 
+/* ------------------------------------------------ */
+
+/* header  */
 .header {
   background-color: rgb(10, 10, 10);
   position: sticky;
@@ -21,9 +44,7 @@ body {
   border-radius: 20px;
   min-width: 270px;
   height: fit-content;
-  box-shadow: 15px 18px 70px 19px rgba(0, 0, 0, 0.46);
-  -webkit-box-shadow: 15px 18px 70px 19px rgba(0, 0, 0, 0.46);
-  -moz-box-shadow: 15px 18px 70px 19px rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -102,7 +123,9 @@ body {
   margin-top: 20px;
   font-size: 10px;
 }
+/* ------------------------------------------------------- */
 
+/* main */
 .main {
   /* background-color: blue; */
   width: 75%;
@@ -119,11 +142,11 @@ body {
   border-radius: 20px;
   padding: 40px 40px 40px 70px;
   background-color: #383636;
-  box-shadow: 10px 19px 111px 13px rgba(0, 0, 0, 0.83);
-  -webkit-box-shadow: 10px 19px 111px 13px rgba(0, 0, 0, 0.83);
-  -moz-box-shadow: 10px 19px 111px 13px rgba(0, 0, 0, 0.83);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+/* ---------------------------- */
 
+/* section home */
 .home {
   /* height: 600px; */
   /* background-color: aqua; */
@@ -172,10 +195,15 @@ body {
   scale: 1.1;
 }
 
+/* --------------------------------------------------- */
+
+/* section skills */
+
 .skills {
   /* background-color: rgb(0, 0, 0); */
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  /* gap: 20px; */
 }
 
 .skill-container_cards {
@@ -222,3 +250,67 @@ body {
   margin-top: 10px;
   color: rgb(190, 188, 190);
 }
+
+/* ------------------------------------------ */
+
+/* projects  */
+
+.projects {
+  /* background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%); */
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  /* padding: var(--spacing-xxl) var(--spacing-l); */
+}
+
+.projects-container_card {
+  /* width: 100%; */
+  /* background-color: #cc35ff; */
+  width: 100%;
+  display: flex;
+  gap: 90px;
+}
+
+.projects-card {
+}
+
+.projects-card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  transition: filter 200ms linear, transform 200ms linear;
+}
+
+.projects-card:hover .projects-card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.projects-container_card:hover
+  > .projects-card:not(:hover)
+  .projects-card__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+/* .projects-card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.projects-card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.projects-card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  background-color: #cc35ff;
+  word-spacing: 100vw;
+} */
