@@ -20,6 +20,11 @@ body {
   background-color: #000000;
 }
 
+*::selection {
+  background-color: #cc35ff;
+  color: #000000;
+}
+
 /* -------------------------------------- */
 
 /* container */
@@ -36,11 +41,11 @@ body {
 
 /* header  */
 .header {
-  background-color: rgb(10, 10, 10);
+  background-color: rgb(19, 19, 19);
   position: sticky;
   width: 20%;
   padding: 70px 20px;
-  top: 30px;
+  top: 50px;
   border-radius: 20px;
   min-width: 270px;
   height: fit-content;
@@ -92,8 +97,31 @@ body {
   /* background-color: blue; */
   gap: 8px;
   align-items: center;
-  max-width: 60%;
+  max-width: fit-content;
   min-width: 70px;
+  position: relative;
+}
+
+.header-link::after {
+  content: "";
+  background: #4ca5ff;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  border-radius: 50px;
+  transform: translateX(-100%);
+  transition: 0.5s all ease-in-out;
+  opacity: 0;
+}
+
+.header-link__active {
+  transform: translateX(5px);
+}
+
+.header-link__active::after {
+transform: translateX(0%);
+opacity: 1;
 }
 
 .header-link:hover {
@@ -254,63 +282,213 @@ body {
 /* ------------------------------------------ */
 
 /* projects  */
+.project{
+  flex-direction: column;
+}
 
-.projects {
-  /* background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%); */
+.project-container {
+  display: flex;
+}
+
+.project-card{
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  overflow:hidden;
+  position: relative;
+  border-radius: 20px; 
+  cursor:pointer; 
+}
+
+.project-img {
+  height: 100%;
+  width: 100%;
+  transition: .5s;
+  background-repeat: repeat;
+  opacity: 0.8;
+}
+
+.project-card:hover .project-img{
+  transform:scale(1.1);
+}
+
+.project-description{
+  height:80px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  position:absolute;
+  bottom:0px;
+  color:#FFF; 
+  transition: .5s;
+  background-color: #00000046;
+}
+
+.project-card:hover .project-description{
+  height:200px;
+  bottom:-4px;
+  background:black;
+  text-align: left;
+}
+
+
+.project-title{
+  margin:10px;
+  font-size: 30px;
+}
+
+.project-p{
+  font-size: 14px;
+  margin:10px;
+  visibility:hidden;
+  opacity: 0;
+}
+
+.project-card:hover .project-p{
+  opacity:1;
+  visibility: visible;  
+}
+
+
+/* contact */
+
+.contact {
+  /* background-color: #333333; */
+}
+
+.container-contact {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  /* background-color: #cc35ff; */
+  width: 50%;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 3em;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  /* padding: var(--spacing-xxl) var(--spacing-l); */
-}
-
-.projects-container_card {
-  /* width: 100%; */
-  /* background-color: #cc35ff; */
+  justify-content: center;
   width: 100%;
-  display: flex;
-  gap: 90px;
+}
+  
+  .contact-p {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .contact-input {
+    background: transparent;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
+    resize: none;
+  }
+
+  .contact-input:hover {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+
+  }
+
+  
+  .contact-input:focus  {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+  }
+  
+  .contact-input[type="button"] {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+    background: #cd35ff94;
+    cursor: pointer;
+  }
+  
+  .contact-input[type="button"]:hover {
+    background: #cc35ff;
+  }
+  
+  .contact-input[type="button"]:active {
+    background: rgba(255,255,255,0.2);
+  }
+
+::placeholder {
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
-.projects-card {
-}
-
-.projects-card__background {
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--spacing-l);
-  filter: brightness(0.75) saturate(1.2) contrast(0.85);
-  transition: filter 200ms linear, transform 200ms linear;
-}
-
-.projects-card:hover .projects-card__background {
-  transform: scale(1.05) translateZ(0);
-}
-
-.projects-container_card:hover
-  > .projects-card:not(:hover)
-  .projects-card__background {
-  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-}
-
-/* .projects-card__content {
-  left: 0;
-  padding: var(--spacing-l);
+.drop {
+  background: #4ca5ff4b;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
   position: absolute;
-  top: 0;
+  
+}
+.drop-1 {
+  height: 80px;
+  width: 80px;
+  top: -20px;
+  left: -40px;
+  z-index: -1;
 }
 
-.projects-card__category {
-  color: var(--text-light);
-  font-size: 0.9rem;
-  margin-bottom: var(--spacing-s);
-  text-transform: uppercase;
+.drop-2 {
+  height: 80px;
+  width: 80px;
+  bottom: -30px;
+  right: -10px;
 }
 
-.projects-card__heading {
-  color: var(--text-lighter);
-  font-size: 1.9rem;
-  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-  line-height: 1.4;
-  background-color: #cc35ff;
-  word-spacing: 100vw;
-} */
+.drop-3 {
+  height: 100px;
+  width: 100px;
+  bottom: 120px;
+  right: -50px;
+  z-index: -1;
+}
+
+.drop-4 {
+  height: 120px;
+  width: 120px;
+  top: -60px;
+  right: -60px;
+}
+
+.drop-5 {
+  height: 60px;
+  width: 60px;
+  bottom: 170px;
+  left: 90px;
+  z-index: -1;
+}

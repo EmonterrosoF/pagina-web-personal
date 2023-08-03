@@ -16,6 +16,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- header -->
       <header class="header">
         <div class="logo">
           <a
@@ -32,7 +33,7 @@
         <div class="header-menu">
           <ul class="header-ul">
             <li class="header-li">
-              <a class="header-link" href="#">
+              <a class="header-link header-link__active" href="#">
                 <img
                   class="header-link_icon"
                   src="assets/home.svg"
@@ -42,7 +43,7 @@
               </a>
             </li>
             <li class="header-li">
-              <a class="header-link" href="#habilidades">
+              <a class="header-link" href="#skill">
                 <img
                   class="header-link_icon"
                   src="assets/hability.svg"
@@ -52,7 +53,7 @@
               </a>
             </li>
             <li class="header-li">
-              <a class="header-link" href="#projects">
+              <a class="header-link" href="#project">
                 <img
                   class="header-link_icon"
                   src="assets/project.svg"
@@ -62,7 +63,7 @@
               </a>
             </li>
             <li class="header-li">
-              <a class="header-link" href="#">
+              <a class="header-link" href="#contact">
                 <img
                   class="header-link_icon"
                   src="assets/contact.svg"
@@ -85,11 +86,15 @@
           <span> © 2023 Edras Monterroso</span>
         </footer>
       </header>
+    <!-- ----------------------------------- -->
+
       <main class="main">
+        <!-- home -->
         <div class="grapper home" id="home">
           <div class="home-container_info">
             <h1 class="home-title">Edras Monterroso</h1>
-            <h2 class="home-subtitle">👋 Soy Desarrollador Web</h2>
+    
+            <h2 class="home-subtitle"><span style="color: black;">👋</span> Soy Desarrollador Web</h2>
             <p class="home-p">
               Construyo cosas para la web. Soy ingeniero de software
               especializado en la construcción (y ocasionalmente en el diseño de
@@ -111,7 +116,10 @@
             />
           </div>
         </div>
-        <div class="grapper skills" id="habilidades">
+        <!-- ------------------------------------------------- -->
+
+        <!-- skills -->
+        <div class="grapper skills" id="skill">
           <h2 class="home-subtitle">Habilidades</h2>
           <div class="skill-container_cards">
             <div class="skill-card">
@@ -181,35 +189,53 @@
             </div>
           </div>
         </div>
-        <section class="grapper projects" id="projects">
-          <h2 class="home-subtitle">Projectos</h2>
-          <div class="projects-container_card">
-            <a class="projects-card" href="#">
-              <img
-                class="projects-card__background"
-                src="assets/shortlink.webp"
-              /><img />
-              <div class="projects-card__content">
-                <p class="projects-card__category">Category</p>
-                <h3 class="projects-card__heading">
-                  Example projects-Card Heading
-                </h3>
-              </div>
-            </a>
-            <a class="projects-card" href="#">
-              <img
-                class="projects-card__background"
-                src="assets/pdftools.webp"
-              /><img />
-              <div class="projects-card__content">
-                <p class="projects-card__category">Category</p>
-                <h3 class="projects-card__heading">
-                  Example projects-Card Heading
-                </h3>
-              </div>
-            </a>
+        <!-- ----------------------------------------------------- -->
+
+        <!-- projects -->
+        <div class="grapper project" id="project">
+          <h2 class="home-subtitle">Proyectos</h2>
+          <div class="project-container">
+            <div class="project-card">
+            <img  class="project-img" src="assets/shortlink.webp" alt="">
+            <div class="project-description">
+              <h1 class="project-title">Shortlink</h1>
+              <p class="project-p"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex hic corporis animi harum? Nisi quis ipsum laborum a animi perspiciatis assumenda quae deserunt porro, soluta voluptatum molestiae. Eveniet, aliquam! Mollitia? </p>
+            </div>
+            </div>
+            
+            <div class="project-card">
+            <img class="project-img" src="assets/pdftools.webp" alt="">
+            <div class="project-description">
+              <h1 class="project-title">Pdftools</h1>
+              <p class="project-p"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex hic corporis animi harum? Nisi quis ipsum laborum a animi perspiciatis assumenda quae deserunt porro, soluta voluptatum molestiae. Eveniet, aliquam! Mollitia? </p>
+            </div>
+            </div>
           </div>
-        </section>
+        </div>
+        <!-- ---------------------------------------------------------------- -->
+       
+        <!-- contact -->
+        <div class="grapper contact" id="contact">
+          <div class="container-contact" >
+            <h2 class="home-subtitle" style="text-align: center;">Contacto</h2>
+            <form class="contact-form" >
+              <input class="contact-input" type="text" placeholder="Tu nombre">
+              <input class="contact-input" type="email" placeholder="Correo">
+              <input class="contact-input" type="number" placeholder="Numero de telefono">
+              <textarea cols="10" rows="10" class="contact-input" placeholder="Como puedo ayudarte"></textarea>
+              <input class="contact-input" type="button" value="Contactar">
+            </form>
+          
+            <div class="drops">
+              <div class="drop drop-1"></div>
+              <div class="drop drop-2"></div>
+              <div class="drop drop-3"></div>
+              <div class="drop drop-4"></div>
+              <div class="drop drop-5"></div>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------- -->
       </main>
     </div>
   </body>
