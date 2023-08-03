@@ -4,10 +4,269 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Web Personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/main.js"></script>
   </head>
   <body>
-    <p>Hola mundo</p>
+    <div class="container">
+      <!-- header -->
+      <div class="hamburger">
+        <div class="_layer -top"></div>
+        <div class="_layer -mid"></div>
+        <div class="_layer -bottom"></div>
+      </div>
+      <header class="header hamburger-menu">
+        <div class="logo">
+          <a
+            href="#
+          "
+          >
+            <img src="assets/logo.svg" alt="logo"
+          /></a>
+        </div>
+        <div class="header-info">
+          <h2 class="header-name">Edras Monterroso</h2>
+          <p class="header-description">WEB DEVELOPER</p>
+        </div>
+        <div class="header-menu">
+          <ul class="header-ul">
+            <li class="header-li">
+              <a class="header-link header-link__active" href="#">
+                <img
+                  class="header-link_icon"
+                  src="assets/home.svg"
+                  alt="home"
+                />
+                <span> Inicio </span>
+              </a>
+            </li>
+            <li class="header-li">
+              <a class="header-link" href="#skill">
+                <img
+                  class="header-link_icon"
+                  src="assets/hability.svg"
+                  alt="habilidades"
+                />
+                <span> Habilidades </span>
+              </a>
+            </li>
+            <li class="header-li">
+              <a class="header-link" href="#project">
+                <img
+                  class="header-link_icon"
+                  src="assets/project.svg"
+                  alt="proyectos"
+                />
+                <span> Proyectos </span>
+              </a>
+            </li>
+            <li class="header-li">
+              <a class="header-link" href="#contact">
+                <img
+                  class="header-link_icon"
+                  src="assets/contact.svg"
+                  alt="contacto"
+                />
+                <span> Contacto </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-social">
+          <a class="header-social_icon" href="#">
+            <img src="assets/linkedin.svg" alt="lindedin" />
+          </a>
+          <a class="header-social_icon" href="#">
+            <img src="assets/github.svg" alt="github" />
+          </a>
+        </div>
+        <footer class="header-footer">
+          <span> © 2023 Edras Monterroso</span>
+        </footer>
+      </header>
+      <!-- ----------------------------------- -->
+
+      <main class="main">
+        <!-- home -->
+        <div class="grapper home" id="home">
+          <div class="home-container_info">
+            <h1 class="home-title">Edras Monterroso</h1>
+
+            <h2 class="home-subtitle">
+              <span style="color: black">👋</span> Soy Desarrollador Web
+            </h2>
+            <p class="home-p">
+              Construyo cosas para la web. Soy ingeniero de software
+              especializado en la construcción (y ocasionalmente en el diseño de
+              experiencias digitales excepcionales). Actualmente estoy enfocado
+              en construir productos accesibles para todo el mundo
+            </p>
+            <div class="home-container_button">
+              <a class="home-button" href="assets/cv.pdf" download=""
+                >Descargar CV</a
+              >
+              <a class="home-button" href="#">Portafolio</a>
+            </div>
+          </div>
+          <div class="home-programmer" style="width: 100%">
+            <img
+              style="width: 100%"
+              src="assets/development.svg"
+              alt="development"
+            />
+          </div>
+        </div>
+        <!-- ------------------------------------------------- -->
+
+        <!-- skills -->
+        <div class="grapper skills" id="skill">
+          <h2 class="title-module">Habilidades</h2>
+          <div class="skill-container_cards">
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/html.svg" alt="html" />
+              <h3 class="skill-title">HTML</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/css.svg" alt="html" />
+              <h3 class="skill-title">CSS</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/js.svg" alt="html" />
+              <h3 class="skill-title">JS</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/ts.svg" alt="html" />
+              <h3 class="skill-title">TS</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/angularjs.svg" alt="html" />
+              <h3 class="skill-title">Angular</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/react.svg" alt="html" />
+              <h3 class="skill-title">React</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/node.svg" alt="html" />
+              <h3 class="skill-title">Node js</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+            <div class="skill-card">
+              <img class="skill-icon" src="assets/express.svg" alt="html" />
+              <h3 class="skill-title">Express js</h3>
+              <p class="skill-p">
+                Este lenguaje permite definir la estructura y el contenido de
+                una página web
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ----------------------------------------------------- -->
+
+        <!-- projects -->
+        <div class="grapper project" id="project">
+          <h2 class="title-module">Proyectos</h2>
+          <div class="project-container">
+            <div class="project-card">
+              <img class="project-img" src="assets/shortlink.webp" alt="" />
+              <div class="project-description">
+                <h1 class="project-title">Shortlink</h1>
+                <p class="project-p">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+                  hic corporis animi harum? Nisi quis ipsum laborum a animi
+                  perspiciatis assumenda quae deserunt porro, soluta voluptatum
+                  molestiae. Eveniet, aliquam! Mollitia?
+                </p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img class="project-img" src="assets/pdftools.webp" alt="" />
+              <div class="project-description">
+                <h1 class="project-title">Pdftools</h1>
+                <p class="project-p">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex
+                  hic corporis animi harum? Nisi quis ipsum laborum a animi
+                  perspiciatis assumenda quae deserunt porro, soluta voluptatum
+                  molestiae. Eveniet, aliquam! Mollitia?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ---------------------------------------------------------------- -->
+
+        <!-- contact -->
+        <div class="grapper contact" id="contact">
+          <h2 class="title-module">Contacto</h2>
+          <div class="container-contact">
+            <form class="contact-form">
+              <input
+                class="contact-input"
+                type="text"
+                placeholder="Tu nombre"
+              />
+              <input class="contact-input" type="email" placeholder="Correo" />
+              <input
+                class="contact-input"
+                type="number"
+                placeholder="Numero de telefono"
+              />
+              <textarea
+                cols="10"
+                rows="10"
+                class="contact-input"
+                placeholder="Como puedo ayudarte"
+              ></textarea>
+              <input class="contact-input" type="button" value="Contactar" />
+            </form>
+
+            <div class="drops">
+              <div class="drop drop-1"></div>
+              <div class="drop drop-2"></div>
+              <div class="drop drop-3"></div>
+              <div class="drop drop-4"></div>
+              <div class="drop drop-5"></div>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------------------------------------------------- -->
+      </main>
+    </div>
   </body>
 </html>
